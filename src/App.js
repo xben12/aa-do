@@ -81,7 +81,7 @@ class App extends Component {
 
 
         <h4>Your Social Recovery AA Wallet</h4>
-        <button type="button" onClick="">Add Protection</button>
+        <button type="button" onClick={()=> alert("add protection!")}>Add Protection</button>
         <button type="button" onClick="">Key Recovery</button>
 
 
