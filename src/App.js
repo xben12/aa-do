@@ -1,9 +1,7 @@
 
 import { React, Component } from 'react';
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
 import SCW from "./zeroDev/scw.js"
-import PassKeyWallet_comp from "./zeroDev/scw_passkey.js"
+//import PassKeyWallet_comp from "./zeroDev/scw_passkey.js"
 
 
 import {ethers} from 'ethers';  
@@ -79,20 +77,12 @@ class App extends Component {
         <h4>Your NFT amount is {this.state.nft_count} !</h4>
         <h4> </h4>
 
-        <h4>Your Passkey AA Wallet</h4>
-        <PassKeyWallet_comp />
+
 
 
         <h4>Your Social Recovery AA Wallet</h4>
         <button type="button" onClick="">Add Protection</button>
         <button type="button" onClick="">Key Recovery</button>
-       
-        <Popup trigger=
-          {<button> Just Test (popup) </button>}
-          position="right center">
-          <div>GeeksforGeeks</div>
-          <button>Click here</button>
-        </Popup>
 
 
 
@@ -107,3 +97,9 @@ class App extends Component {
 
 
 export default App;
+
+
+/*
+        <h4>Your Passkey AA Wallet</h4>
+        <PassKeyWallet_comp />
+*/
