@@ -21,11 +21,13 @@ class SCW {
             })
             this.owner_address = await this.ecdsaProvider.getAddress()
             console.log('My address:', this.owner_address)
+
+            return this.owner_address;
         }
         catch (err) {
             console.log(err)
         }
-        return this.owner_address;
+        return "address not created. "
     }
 
     async test_account() {
