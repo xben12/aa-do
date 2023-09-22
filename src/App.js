@@ -32,14 +32,14 @@ class App extends Component {
       let private_key = "0xf891fd65049f5576ac4a7e0430f3bf5b7eb70c4b12d1917783b009f4bf9f245f";
       this.scw = new SCW();
 
-      await this.scw.initialise(projectId, private_key);
-      console.log("owner address is", this.scw.owner_address);
-      this.b_create_scw = true;
+      const return_address = await this.scw.initialise(projectId, private_key);
+    
+      
 
       // get EOA address: '-----BEGIN RSA PRIVATE KEY-----...'
       var wallet = new ethers.Wallet(private_key);
-      result_string = this.scw.owner_address + ", EOA native: " + wallet.address
-
+      result_string = return_address + ", EOA native: " + wallet.address
+      this.b_create_scw = true;
 
     } catch (e) {
       result_string = e.prototype.toString();
@@ -88,7 +88,7 @@ class App extends Component {
         <button type="button" onClick={() => alert("add protection!")}>Add Protection</button>
         <button type="button" onClick="">Key Recovery</button>
 
-        <h5>version 2023-09-22:09-35</h5>
+        <h5>version 2023-09-22:1002</h5>
 
       </div>
 

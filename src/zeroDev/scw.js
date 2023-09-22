@@ -10,7 +10,7 @@ class SCW {
     }
 
     async initialise(projectId, _private_key) {
-        //try {
+        try {
             this.projectId = projectId;
             this.owner = LocalAccountSigner.privateKeyToAccountSigner(_private_key);
 
@@ -23,11 +23,11 @@ class SCW {
             // console.log('My address:', this.owner_address)
 
             return this.owner_address;
-/*         }
+         }
         catch (err) {
             console.log(err)
             return err.prototype.toString();
-        } */
+        } 
     }
 
     async test_account() {
