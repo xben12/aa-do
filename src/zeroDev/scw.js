@@ -10,7 +10,7 @@ class SCW {
     }
 
     async initialise(projectId, _private_key) {
-        try {
+        //try {
             this.projectId = projectId;
             this.owner = LocalAccountSigner.privateKeyToAccountSigner(_private_key);
 
@@ -20,14 +20,14 @@ class SCW {
                 owner,
             })
             this.owner_address = await this.ecdsaProvider.getAddress()
-            console.log('My address:', this.owner_address)
+            // console.log('My address:', this.owner_address)
 
             return this.owner_address;
-        }
+/*         }
         catch (err) {
             console.log(err)
-        }
-        return "address not created. "
+            return err.prototype.toString();
+        } */
     }
 
     async test_account() {
